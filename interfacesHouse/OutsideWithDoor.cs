@@ -14,6 +14,7 @@ namespace interfacesHouse
             DoorDescription = doorDescription;
         }
 
+        // exterior door
         public string DoorDescription { get; private set; }
         public Location DoorLocation { get; set; }
 

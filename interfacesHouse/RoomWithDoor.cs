@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace interfacesHouse
 {
-    class RoomWithDoor : Room, IHasExteriorDoor
+    class RoomWithDoor : RoomWithHidingPlace, IHasExteriorDoor
     {
-        public RoomWithDoor(string name, string decoration, string doorDescription) 
-            : base(name, decoration)
+        public RoomWithDoor(string name, string decoration, string hidingPlace, string doorDescription) 
+            : base(name, decoration, hidingPlace)
         {
             DoorDescription = doorDescription;
         }
 
+        // exterior door
         public string DoorDescription { get; private set; }
         public Location DoorLocation { get; set; } 
     }
